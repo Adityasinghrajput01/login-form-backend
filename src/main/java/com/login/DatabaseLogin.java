@@ -58,9 +58,9 @@ class signup{
     }
     public int check() throws SQLException{
         try{
-        String url = "jdbc:mysql://localhost:3306/world";
-        String user = "adi";
-        Connection con  = DriverManager.getConnection(url, user, "Minjoadi@23");
+        String url = "";
+        String user = "";
+        Connection con  = DriverManager.getConnection(url, user, "@password");
        PreparedStatement ps =
             con.prepareStatement("INSERT INTO users (username,gmail,password) VALUES (?, ?, ?)");
             ps.setString(1, username);
@@ -90,9 +90,9 @@ class login{
 }
 
  public int check() throws SQLException{
-    String url = "jdbc:mysql://localhost:3306/world";
-        String user = "adi";
-        Connection con = DriverManager.getConnection(url, user, "Minjoadi@23");
+    String url = "";
+        String user = "";
+        Connection con = DriverManager.getConnection(url, user, "@password");
           PreparedStatement ps = con.prepareStatement(
                 "SELECT username, password FROM users WHERE gmail = ?"
             );
